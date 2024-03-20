@@ -1,0 +1,21 @@
+<body>
+    <h1>Detalle de Banda</h1>
+    
+    <% for (let i = 0; i < resultado.length; i++) { %>
+        <div>
+            <h2><%= resultado[i].nombre %></h2>
+            <p>Integrantes: <%= resultado[i].integrantes %></p>
+            <p>Género: <a href="http://localhost:3000/bandas/genero/<%=resultado[i].genero%>"><%= resultado[i].genero %></a></p>
+            <p>Top Canciones:</p>
+            <ul>
+                <% for (let j = 0; j < resultado[i].topCanciones.length; j++) { %>
+                    <li><%= resultado[i].topCanciones[j] %></li>
+                <% } %>
+            </ul>
+            <% let imagen = resultado[i].cover %>
+            Cover: <img src= <%= imagen.toLowerCase() %> alt="<%= resultado[i].cover %>">
+            <p>Video: <a href="<%= resultado[i].video %>">Ver Video</a></p>
+        </div>
+    <% } %>
+</body>
+</html>

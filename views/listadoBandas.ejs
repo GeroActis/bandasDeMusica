@@ -1,0 +1,11 @@
+<main>
+    <h1>Lista de bandas</h1>
+    <ul>
+        <% for(let i = 0; i < index.length; i++) { %>
+         <li>
+            Nombre: <a href="http://localhost:3000/bandas/detalle/<%=index[i].id%>"><%= index[i].nombre %></a>
+            Cover: <img src="<%= index[i].cover %>" alt="">
+         </li>
+        <% } %>
+    </ul> 
+</main>

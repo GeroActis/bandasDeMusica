@@ -1,0 +1,11 @@
+<h1>Generos</h1>
+<h3> <%=resGen[1].genero%> </h3>
+<% for (let i = 0; i < resGen.length; i++) { %>
+    <div>
+        <li>
+            Nombre: <a href="http://localhost:3000/bandas/detalle/<%=resGen[i].id%>"><%= resGen[i].nombre %></a>
+            Cover: <img src="<%= resGen[i].cover %>" alt="">
+         </li>
+    </div>
+
+<% } %>
